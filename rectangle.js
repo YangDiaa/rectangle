@@ -13,8 +13,8 @@ $(function(){
         var w = Number($width.val()),
             h = Number($height.val());
         //calculate
-        var p = 2*(roundFractional(w + h, 1));
-            a = roundFractional(w * h, 2);
+        var p = roundFractional(w*2 + h*2, 4);
+            a = roundFractional(w * h, 10);
         //output
         $perimeter.val(p);
         $area.val(a);
