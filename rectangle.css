@@ -1,16 +1,16 @@
 #box{
-    width:370px;
+	font-size:1.1em;
     margin:50px auto;
-    font-size:1.1em;
+    width:370px;
 }
 #calculate{
+	margin-left:58px;
     width:70px;
-    margin-left:58px;
 }
 input label,span{
+	font-size:1em;
     margin: 5px 0 ;
-    padding-left:5px;
-    font-size:1em;
+    padding-left:5px;  
 }
 span{
     color:red;
