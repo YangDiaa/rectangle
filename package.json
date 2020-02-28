@@ -3,15 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "rectangle.js",
-  "dependencies": {},
-  "devDependencies": {
-    "grunt": "^1.0.4",
-    "grunt-contrib-csslint": "^2.0.0",
-    "grunt-eslint": "^22.0.0",
-    "grunt-htmlhint": "^0.9.13"
+  "directories": {
+    "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "grunt lint && grunt unitTest"
   },
   "repository": {
     "type": "git",
@@ -23,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/YangDiaa/rectangle/issues"
   },
-  "homepage": "https://github.com/YangDiaa/rectangle#readme"
+  "homepage": "https://github.com/YangDiaa/rectangle#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "grunt": "^1.0.4",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-eslint": "^22.0.0",
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-mocha": "^1.2.0",
+    "mocha": "^7.1.0"
+  }
 }

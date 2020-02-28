@@ -10,13 +10,14 @@ $(function(){
     /*calc button click event*/
     $btnCal.click(function(){
         //get value
-        var w = Number($width.val()),
-            h = Number($height.val());
+        var w = $width.val(),       
+            h = $height.val();
         //calculate
-        var p = roundFractional(w*2 + h*2, 4);
-            a = roundFractional(w * h, 10);
+        // var p = roundFractional(w*2 + h*2, 4);
+        //     a = roundFractional(w * h, 10);
         //output
-        $perimeter.val(p);
-        $area.val(a);
+        var r = new Rectangle(w, h);
+        $perimeter.val(r.perimeter());
+        $area.val(r.area());
     })
 });
