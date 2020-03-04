@@ -1,0 +1,39 @@
+{
+  "name": "rectangle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rectangle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt lint && grunt unitTest && grunt minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YangDiaa/rectangle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YangDiaa/rectangle/issues"
+  },
+  "homepage": "https://github.com/YangDiaa/rectangle#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "grunt": "^1.0.4",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-eslint": "^22.0.0",
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-mocha": "^1.2.0",
+    "grunt-usemin": "^3.1.1",
+    "mocha": "^7.1.0"
+  }
+}
