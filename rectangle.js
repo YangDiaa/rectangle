@@ -6,16 +6,37 @@ $(function(){
         $height = $('#height'),
         $btnCal = $('#calculate'),
         $perimeter = $('#perimeter'),
-        $area = $('#area');
+        $area = $('#area'),
+        $widthValidate = $('#width-validate-message'),
+        $heightValidate = $('#height-validate-message'),
+        isPassValidate = false;
+    
+    $width.focusout(function(){
+        var result = validate($width.val());
+        isPassValidate = result.isOK;
+        if(!result.isOK){
+            $widthValidate.html('宽度' + result.reason);
+            $width.select(); 
+        }
+    });
+
+    $height.focusout(function(){
+        var result = validate($height.val());
+        isPassValidate = result.isOK;
+        if(!result.isOK){
+            $heightValidate.html('高度' + result.reason);
+            $height.select(); 
+        }
+    });
     /*calc button click event*/
     $btnCal.click(function(){
+        
+        if(!isPassValidate){
+            return;
+        }
         //get value
         var w = $width.val(),       
             h = $height.val();
-        //calculate
-        // var p = roundFractional(w*2 + h*2, 4);
-        //     a = roundFractional(w * h, 10);
-        //output
         var r = new Rectangle(w, h);
         $perimeter.val(r.perimeter());
         $area.val(r.area());

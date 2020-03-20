@@ -14,3 +14,23 @@ function Rectangle(width, height) {
       return roundFractional(w*2 + h*2, 4);;
     };
 }
+function validate(data){
+  var result={
+    isOK: false,
+    reason: ''
+  };
+  if(data === ''){
+    result.reason = '不能为空!';
+    return result;
+  }
+  if(!(/^-?(0|[1-9]\d*)(\.\d*)?([eE][+-]?\d+)?$/.test(data))) {
+    result.reason = "必须是数值";
+    return result;
+  }
+  if(Number(data)<0){
+    result.reason = "必须大于零";
+    return result;
+  }
+  result.isOK = true;
+  return result;
+}
