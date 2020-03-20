@@ -34,3 +34,36 @@ function validate(data){
   result.isOK = true;
   return result;
 }
+function isLegalKey(key, content, pos) {
+  if(/[abcdf-zABCDF-Z`~!@#$%^&*()\-=_+[\]{}|;:'",<>/?\\]/.test(key)) {
+    return false;
+  }
+
+  if(key === '.') {
+    if(pos === 0 || content.indexOf('.') !== -1){
+      return false;
+    }
+    if(pos === 1 && content.substring(0,1) === '-') {
+      return false;
+    }
+  }
+
+  if(key === 'e') {
+    if(pos === 0 || content.indexOf('e') !== -1 || content.indexOf('E') !== -1) {
+      return false;
+    }
+    if(pos === 1 && content.substring(0,1) === '-') {
+      return false;
+    }
+  }
+
+  if(key === 'E') {
+    if(pos === 0 || content.indexOf('e') !== -1 || content.indexOf('E') !== -1){
+      return false;
+    } 
+    if(pos === 1 && content.substring(0,1) === '-') {
+      return false;
+    }
+  }
+  return true;
+}

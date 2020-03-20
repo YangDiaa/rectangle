@@ -13,12 +13,24 @@ $(function(){
         $forkMeGH.show('https://github.com/sihan9/rectangle');
         $bszPageFooter.show('body');
     
+    $width.keypress(function(e){
+        if(!isLegalKey(e.key,e.target.value,e.target.selectionStart)){
+            e.preventDefault();
+        }
+    });
+
     $width.focusout(function(){
         var result = validate($width.val());
         isPassValidate = result.isOK;
         if(!result.isOK){
             $widthValidate.html('宽度' + result.reason);
             $width.select(); 
+        }
+    });
+    
+    $height.keypress(function(e) {
+        if(!isLegalKey(e.key, e.target.value, e.target.selectionStart)) {
+          e.preventDefault();
         }
     });
 
