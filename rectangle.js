@@ -10,6 +10,8 @@ $(function(){
         $widthValidate = $('#width-validate-message'),
         $heightValidate = $('#height-validate-message'),
         isPassValidate = false;
+        $forkMeGH.show('https://github.com/sihan9/rectangle');
+        $bszPageFooter.show('body');
     
     $width.focusout(function(){
         var result = validate($width.val());
