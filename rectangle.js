@@ -10,7 +10,7 @@ $(function(){
         $widthValidate = $('#width-validate-message'),
         $heightValidate = $('#height-validate-message'),
         isPassValidate = false;
-        $forkMeGH.show('https://github.com/sihan9/rectangle');
+        $forkMeGH.show('https://github.com/YangDiaa/rectangle');
         $bszPageFooter.show('body');
     
     $width.keypress(function(e){
